@@ -17,6 +17,8 @@ import { JobProgressComponent } from './components/job-progress/job-progress.com
 import { CompanyCardComponent } from './components/company-card/company-card.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { JobCreateComponent } from './components/job/job-create/job-create.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HeaderComponent,
     JobCardComponent,
     JobProgressComponent,
-    CompanyCardComponent
+    CompanyCardComponent,
+    JobCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatCardModule,
     FlexLayoutModule,
     MatProgressBarModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+mat-label{
+    color: black;
+}
+
+.job-info-field {
+    width: 65%;
+}
+
+.mat-form-field-ripple{
+    background-color: black !important;
+}
