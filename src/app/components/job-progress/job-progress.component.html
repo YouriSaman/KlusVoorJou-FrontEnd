@@ -1,0 +1,23 @@
+<h1 style="margin: 0 10px">Job progress</h1>
+
+<div fxLayout="row">
+    <app-job-card fxFlex="50" [job]=job [listCard]=false [sizeImg]=40 [sizeTxt]=50></app-job-card>
+    <app-company-card fxFlex="50" [company]="company"></app-company-card>
+</div>
+
+<mat-card>
+    <mat-card-title>Progress</mat-card-title>
+    <mat-card-content>
+        <mat-progress-bar mode="determinate" value="{{progress}}"></mat-progress-bar>
+    </mat-card-content>
+</mat-card>
+
+
+<mat-card>
+    <mat-card-title>To do</mat-card-title>
+    <mat-card-content>
+        <div style="margin: 20px" fxLayout="column">
+            <mat-checkbox class="example-margin" *ngFor="let task of tasks" [checked]=task.finished (change)="updateProgress()">{{task.title}}</mat-checkbox>
+        </div>
+    </mat-card-content>
+</mat-card>
