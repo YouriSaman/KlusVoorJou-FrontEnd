@@ -12,18 +12,22 @@ export class JobProgressComponent implements OnInit {
   job: Job = new Job("Grasmaaien", "https://www.makita.nl/data/ab/public/tuincentrum/Keuzehulp/plm4631n2_4-takt_grasmaaier-5.jpg", "Voor en achtertuin grasmaaien", "5673PS", "Nuenen");
   company: Company = new Company("Het Rullen", "https://static.trustoo.nl/users/49577/e140bca090.png", "5674PC", "Nuenen");
   tasks: Task[] = [
-    new Task(true, "Voortuin"),
-    new Task(false, "Achtertuin")
+    new Task(1, true, "Voortuin"),
+    new Task(2, false, "Achtertuin")
   ]
   progress = 0;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.updateProgress();
+    this.updateProgress(0);
   }
 
-  updateProgress(){
+  updateProgress(id: number){
+    let task = this.getTask(id);
+    if(task != undefined){
+      this.changeTaskFinishedBool(task);
+    }
     let finishedTasks = 0;
     this.tasks.forEach(function (task){
       if(task.finished){
@@ -32,6 +36,18 @@ export class JobProgressComponent implements OnInit {
     });
     this.progress = (finishedTasks/this.tasks.length) * 100;
     console.log(this.progress);
+  }
+
+  getTask(id: number){
+    return this.tasks.find(t => t.id === id);
+  }
+
+  changeTaskFinishedBool(task: Task){
+    if(task.finished){
+      task.finished = false;
+    } else {
+      task.finished = true;
+    }
   }
 
 }

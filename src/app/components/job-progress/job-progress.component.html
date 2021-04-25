@@ -17,7 +17,7 @@
     <mat-card-title>To do</mat-card-title>
     <mat-card-content>
         <div style="margin: 20px" fxLayout="column">
-            <mat-checkbox class="example-margin" *ngFor="let task of tasks" [checked]=task.finished (change)="updateProgress()">{{task.title}}</mat-checkbox>
+            <mat-checkbox class="example-margin" *ngFor="let task of tasks" [checked]=task.finished (change)="updateProgress(task.id)">{{task.title}}</mat-checkbox>
         </div>
     </mat-card-content>
 </mat-card>
