@@ -1,5 +1,5 @@
 import { Job } from "./job";
 
-export class JobDataModel {
+export class JobListDataModel {
     jobs: Job[] = [];
 }
