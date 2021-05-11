@@ -20,6 +20,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { JobCreateComponent } from './components/job/job-create/job-create.component';
 import {MatInputModule} from '@angular/material/input';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatProgressBarModule,
     MatCheckboxModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

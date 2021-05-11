@@ -1,4 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Job } from 'src/app/classes/job';
+import { JobService } from 'src/app/services/job.service';
 
 @Component({
   selector: 'app-job-create',
@@ -7,9 +9,14 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class JobCreateComponent implements OnInit {
-  constructor() { }
+  job: Job = new Job();
+
+  constructor(private jobService: JobService) { }
 
   ngOnInit(): void {
   }
 
+  addJob(){
+    this.jobService.createJob(this.job);
+  }
 }

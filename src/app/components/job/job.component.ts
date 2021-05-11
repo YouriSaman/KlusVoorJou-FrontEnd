@@ -11,6 +11,7 @@ import { JobService } from 'src/app/services/job.service';
 export class JobComponent implements OnInit {
 
   jobs: Job[] = [];
+  error: string = "";
 
   constructor(private jobService: JobService) { }
 
@@ -18,6 +19,9 @@ export class JobComponent implements OnInit {
     this.jobService.getJobs().subscribe(
       data => {
         this.jobs = data.jobs;
+      },
+      err => {
+        this.error = "Something went wrong with getting all jobs";
       });
   }
 

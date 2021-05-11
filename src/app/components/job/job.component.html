@@ -1,2 +1,3 @@
 <h1 style="margin: 0 10px">All jobs</h1>
+<div *ngIf=error>{{error}}</div>
 <app-job-card *ngFor="let job of jobs" [job]="job"></app-job-card>

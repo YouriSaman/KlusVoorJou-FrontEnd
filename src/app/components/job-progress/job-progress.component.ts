@@ -9,7 +9,7 @@ import { Task } from 'src/app/classes/task';
   styleUrls: ['./job-progress.component.css']
 })
 export class JobProgressComponent implements OnInit {
-  job: Job = new Job("Grasmaaien", "https://www.makita.nl/data/ab/public/tuincentrum/Keuzehulp/plm4631n2_4-takt_grasmaaier-5.jpg", "Voor en achtertuin grasmaaien", "5673PS", "Nuenen");
+  job: Job = new Job("", "Grasmaaien", "Voor en achtertuin grasmaaien", "https://www.makita.nl/data/ab/public/tuincentrum/Keuzehulp/plm4631n2_4-takt_grasmaaier-5.jpg", "5673PS", "Nuenen");
   company: Company = new Company("Het Rullen", "https://static.trustoo.nl/users/49577/e140bca090.png", "5674PC", "Nuenen");
   tasks: Task[] = [
     new Task(1, true, "Voortuin"),
