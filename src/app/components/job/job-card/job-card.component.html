@@ -12,7 +12,7 @@
                 {{job.city}}
             </mat-card-content>
         </div>
-        <button *ngIf="listCard" routerLink="/job-progress" mat-mini-fab color="accent">
+        <button *ngIf="listCard" (click)="jobProgress(job.id)" mat-mini-fab color="accent">
             <mat-icon>arrow_right_alt</mat-icon>
         </button>
     </div>    

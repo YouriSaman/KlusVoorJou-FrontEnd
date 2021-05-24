@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Job } from 'src/app/classes/job';
 
 @Component({
@@ -12,9 +13,17 @@ export class JobCardComponent implements OnInit {
   @Input() sizeImg = 20;
   @Input() sizeTxt = 80;
   
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  jobProgress(id?: string){
+    if(id != null){
+      this.router.navigate(['/job-progress', id]);
+    } else {
+      alert("Something went wrong, please try again (later)!");
+    }
   }
 
 }

@@ -6,7 +6,7 @@ import { JobComponent } from './components/job/job.component';
 
 const routes: Routes = [
   { path: 'job', component: JobComponent },
-  { path: 'job-progress', component: JobProgressComponent},
+  { path: 'job-progress/:id', component: JobProgressComponent},
   { path: 'job-create', component: JobCreateComponent}
 ];
 
