@@ -21,6 +21,7 @@ import { JobCreateComponent } from './components/job/job-create/job-create.compo
 import {MatInputModule} from '@angular/material/input';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './components/auth/login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     JobCardComponent,
     JobProgressComponent,
     CompanyCardComponent,
-    JobCreateComponent
+    JobCreateComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
